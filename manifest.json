@@ -1,0 +1,53 @@
+{
+  "icons": [
+    {
+      "src": "https://www.t99.cool/icon_512x512.dfcb3c818ce16a66f3a7879411f5ef5f.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.t99.cool/icon_384x384.cd86b5da9235d61a937a9bf0aece334f.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.t99.cool/icon_192x192.93bac774b8d001ff47d9fe83afaea7f3.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.t99.cool/icon_152x152.281315b1e33bc47489685e277fd33b62.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.t99.cool/icon_144x144.c9dc9a0de15e74166f2880fb08052891.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.t99.cool/icon_128x128.63658ea22208f2c7866890351fa69748.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.t99.cool/icon_72x72.628ad2f8e1c738dc4d83c4a00357cf80.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.t99.cool/icon_96x96.8e8f69966bead3d86da74d096b01982c.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "TQ88",
+  "short_name": "TQ88",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "TQ88",
+  "id": "ta5prod",
+  "theme_color": "#EFEFEF",
+  "background_color": "#f5f5f5"
+}
