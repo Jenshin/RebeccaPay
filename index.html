@@ -120,30 +120,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>&copy; 2025 Rebecca Pay. All rights reserved.</p>
   </footer>
   <script>
-  let deferredPrompt;
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault(); // 防止自動跳出
-    deferredPrompt = e;
-
-    // 顯示你的安裝提示按鈕
-    const installBtn = document.getElementById('installBtn');
-    installBtn.style.display = 'block';
-
-    installBtn.addEventListener('click', () => {
-      installBtn.style.display = 'none';
-      deferredPrompt.prompt();
-
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('使用者接受安裝');
-        } else {
-          console.log('使用者取消安裝');
-        }
-        deferredPrompt = null;
-      });
-    });
-  });
+ if (
+  'standalone' in window.navigator && 
+  !window.navigator.standalone &&
+  /iPhone|iPad|iPod/.test(navigator.userAgent)
+) {
+  // 顯示自訂提示：請點「分享」然後選「加入主畫面」
+  const tip = document.createElement('div');
+  tip.innerText = '點選 Safari 的「分享」→ 加入主畫面';
+  tip.style = 'position:fixed;bottom:20px;left:20px;z-index:9999;background:white;padding:10px;border-radius:6px;';
+  document.body.appendChild(tip);
+}
 </script>
 </body>
 </html>
