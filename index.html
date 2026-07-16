@@ -1,52 +1,240 @@
-
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>bcloading 黑底檢查</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BC博粹娛樂城: 下載APP領取168體驗金，新人再享好禮五選一</title>
+  <meta name="description" content="BC博粹娛樂城: 下載APP領取168體驗金，新人再享好禮五選一。" />
   <style>
-    html,
+    :root {
+      --accent: #18b8d8;
+      --accent-2: #0a8eaa;
+      --panel: rgba(11, 19, 29, .78);
+      --border: rgba(255, 255, 255, .16);
+      --text: #fff;
+      --muted: rgba(255,255,255,.72);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      min-height: 100%;
-      background: #050505;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      color: var(--text);
+      background: #071019;
     }
 
-    body {
+    .hero {
+      min-height: 100svh;
+      position: relative;
       display: grid;
-      place-items: center;
-      color: #bdbdbd;
-      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
+      place-items: start center;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        linear-gradient(180deg, rgba(2,10,16,.28) 0%, rgba(2,10,16,.55) 55%, rgba(2,10,16,.94) 100%),
+        radial-gradient(circle at 50% 26%, rgba(0,0,0,.04), rgba(0,0,0,.34) 60%, rgba(0,0,0,.82) 100%),
+        url("https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&w=2400&q=88") center/cover no-repeat;
     }
 
-    main {
-      display: grid;
-      min-height: 100vh;
-      place-items: center;
-      gap: 20px;
-      padding: 32px;
-      box-sizing: border-box;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(0,12,20,.25), transparent 25%, transparent 75%, rgba(0,12,20,.32)),
+        linear-gradient(180deg, transparent 55%, rgba(4,11,18,.72));
+      pointer-events: none;
     }
 
-    img {
-      width: 360px;
-      height: 360px;
-      background: #050505;
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 18%;
+      background: linear-gradient(180deg, transparent, rgba(4,12,19,.95));
+      z-index: -1;
     }
 
-    p {
-      margin: 0;
-      font-size: 14px;
-      color: #9a9a9a;
+    .hero__content {
+      width: min(92vw, 740px);
+      margin-top: clamp(42px, 7vh, 82px);
       text-align: center;
+      animation: fadeUp .9s ease both;
+    }
+
+    .logo {
+      width: clamp(72px, 7vw, 112px);
+      aspect-ratio: 1;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,.42));
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 3.1vw, 54px);
+      line-height: 1.2;
+      letter-spacing: .08em;
+      font-weight: 900;
+      text-shadow: 0 3px 18px rgba(0,0,0,.6);
+    }
+
+    .subtitle {
+      margin: 13px 0 0;
+      font-size: clamp(16px, 1.3vw, 22px);
+      font-weight: 700;
+      letter-spacing: .06em;
+      color: rgba(255,255,255,.9);
+    }
+
+    .cert {
+      margin: 9px 0 0;
+      font-size: clamp(13px, 1vw, 16px);
+      color: var(--muted);
+      letter-spacing: .04em;
+    }
+
+    .more-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 190px;
+      height: 56px;
+      margin-top: 34px;
+      padding: 0 34px;
+      border-radius: 999px;
+      color: #071019;
+      background: #fff;
+      font-size: 18px;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 12px 32px rgba(0,0,0,.28);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .more-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(0,0,0,.38);
+    }
+
+    .gift-label {
+      margin-top: 54px;
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .05em;
+    }
+
+    .arrow {
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin: 9px auto 0;
+      border-right: 3px solid var(--accent);
+      border-bottom: 3px solid var(--accent);
+      transform: rotate(45deg);
+      animation: bounce 1.3s infinite;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      width: min(100%, 490px);
+      margin: 74px auto 0;
+    }
+
+    .action {
+      min-height: 58px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 18px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 900;
+      border: 1px solid var(--border);
+      transition: transform .2s ease, filter .2s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .action:hover { transform: translateY(-3px); filter: brightness(1.08); }
+    .action--dark { background: var(--panel); }
+    .action--blue {
+      border-color: rgba(24,184,216,.4);
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 12px 28px rgba(12,156,187,.24);
+    }
+
+    .line-icon {
+      width: 24px;
+      height: 24px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 7px;
+      background: #06c755;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0) rotate(45deg); }
+      50% { transform: translateY(7px) rotate(45deg); }
+    }
+
+    @media (max-width: 640px) {
+      .hero { background-position: 58% center; }
+      .hero__content { margin-top: 28px; width: min(90vw, 440px); }
+      .logo { width: 84px; }
+      h1 { font-size: 29px; letter-spacing: .04em; }
+      .subtitle { font-size: 16px; }
+      .cert { font-size: 12px; }
+      .more-btn { min-width: 168px; height: 50px; font-size: 16px; margin-top: 28px; }
+      .gift-label { margin-top: 38px; }
+      .actions { grid-template-columns: 1fr; margin-top: 52px; width: 100%; }
+      .action { min-height: 54px; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <img src="https://raw.githubusercontent.com/Jenshin/RebeccaPay/cc48e9c5968f682861a90303a5698d92cb991584/bcloading.svg" alt="bcloading SVG 黑底預覽">
-    <p>黑色背景檢查：請看中間 BC logo 的白色邊緣與右側內凹尖角。</p>
+  <main class="hero">
+    <section class="hero__content" aria-label="品牌首頁主視覺">
+      <img class="logo" src="logo.png" alt="品牌 Logo" />
+
+      <h1>BC博粹娛樂城</h1>
+      <p class="subtitle">下載APP領取168體驗金，新人再享好禮五選一</p>
+      <p class="cert">TST／GLI 雙重權威認證</p>
+
+      <a class="more-btn" href="#actions">更多活動</a>
+
+      <div class="gift-label">解鎖專屬新手禮包</div>
+      <span class="arrow" aria-hidden="true"></span>
+
+      <div class="actions" id="actions">
+        <a class="action action--dark" href="#" aria-label="加入客服">
+          <span class="line-icon">LINE</span>
+          <span>添加客服</span>
+        </a>
+        <a class="action action--blue" href="#" aria-label="領取首次遊玩禮包">
+          領取首次遊玩禮包
+        </a>
+      </div>
+    </section>
   </main>
 </body>
 </html>
